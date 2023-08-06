@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pagebg">
+
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="35dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:scaleType="centerInside"
+        android:src="@drawable/back_button_ic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/banner"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_marginBottom="250dp"
+        android:src="@drawable/banner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/agentname" />
+
+    <TextView
+        android:id="@+id/agentname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/druktextwide_medium_trial"
+        android:text="Brimstone"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/backButton"
+        app:layout_constraintTop_toBottomOf="@+id/backButton" />
+
+
+    <ImageView
+        android:id="@+id/fullportrait"
+        android:layout_width="400dp"
+        android:layout_height="800dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="@dimen/_50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fullportrait"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/agentname"
+        app:layout_constraintTop_toBottomOf="@id/agentname" />
+
+    <ImageView
+        android:id="@+id/shadow"
+        android:layout_width="450dp"
+        android:layout_height="800dp"
+        android:layout_marginBottom="70dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/pink_shadow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/banner"
+        app:layout_constraintVertical_bias="0.502" />
+
+    <ImageView
+        android:id="@+id/role"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="80dp"
+        android:src="@drawable/role_ic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/banner"
+        app:layout_constraintBottom_toTopOf="@id/skillbox1"
+        android:layout_marginBottom="50dp"/>
+
+
+    <TextView
+        android:id="@+id/roletext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/monumentextended_regular"
+        android:text="@string/initator"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@id/role"
+        app:layout_constraintStart_toEndOf="@id/role"
+        app:layout_constraintTop_toTopOf="@id/role" />
+
+    <ImageView
+        android:id="@+id/skillbox1"
+        android:layout_width="70dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="38dp"
+        android:src="@drawable/skillblock_var1"
+        android:layout_marginTop="@dimen/_35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/role" />
+
+    <ImageView
+        android:id="@+id/skillwhitebox1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/whiteblock"
+        app:layout_constraintEnd_toEndOf="@id/skillbox1"
+        app:layout_constraintStart_toStartOf="@id/skillbox1"
+        app:layout_constraintTop_toTopOf="@id/skillbox1" />
+
+    <TextView
+        android:id="@+id/key1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/monumentextended_regular"
+        android:text="C"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/skillwhitebox1"
+        app:layout_constraintEnd_toEndOf="@id/skillwhitebox1"
+        app:layout_constraintStart_toStartOf="@id/skillwhitebox1"
+        app:layout_constraintTop_toTopOf="@id/skillwhitebox1" />
+
+    <ImageView
+        android:id="@+id/skill1ic"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/skill"
+        app:layout_constraintBottom_toBottomOf="@id/skillbox1"
+        app:layout_constraintEnd_toEndOf="@id/skillbox1"
+        app:layout_constraintStart_toStartOf="@id/skillbox1" />
+
+    <ImageView
+        android:id="@+id/skillbox2"
+        android:layout_width="70dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="15dp"
+        android:src="@drawable/skillblock_var2"
+        app:layout_constraintStart_toEndOf="@id/skillbox1"
+        app:layout_constraintTop_toTopOf="@id/skillbox1" />
+
+    <ImageView
+        android:id="@+id/skillwhitebox2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/whiteblock"
+        app:layout_constraintEnd_toEndOf="@id/skillbox2"
+        app:layout_constraintStart_toStartOf="@id/skillbox2"
+        app:layout_constraintTop_toTopOf="@id/skillbox2" />
+
+    <TextView
+        android:id="@+id/key2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/monumentextended_regular"
+        android:text="Q"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/skillwhitebox2"
+        app:layout_constraintEnd_toEndOf="@id/skillwhitebox2"
+        app:layout_constraintStart_toStartOf="@id/skillwhitebox2"
+        app:layout_constraintTop_toTopOf="@id/skillwhitebox2" />
+
+    <ImageView
+        android:id="@+id/skill2ic"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/skill"
+        app:layout_constraintBottom_toBottomOf="@id/skillbox2"
+        app:layout_constraintEnd_toEndOf="@id/skillbox2"
+        app:layout_constraintStart_toStartOf="@id/skillbox2" />
+
+    <ImageView
+        android:id="@+id/skillbox3"
+        android:layout_width="70dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="15dp"
+        android:src="@drawable/skillblock_var1"
+        app:layout_constraintStart_toEndOf="@id/skillbox2"
+        app:layout_constraintTop_toTopOf="@id/skillbox1" />
+
+    <ImageView
+        android:id="@+id/skillwhitebox3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/whiteblock"
+        app:layout_constraintEnd_toEndOf="@id/skillbox3"
+        app:layout_constraintStart_toStartOf="@id/skillbox3"
+        app:layout_constraintTop_toTopOf="@id/skillbox3" />
+
+    <TextView
+        android:id="@+id/key3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/monumentextended_regular"
+        android:text="E"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/skillwhitebox3"
+        app:layout_constraintEnd_toEndOf="@id/skillwhitebox3"
+        app:layout_constraintStart_toStartOf="@id/skillwhitebox3"
+        app:layout_constraintTop_toTopOf="@id/skillwhitebox3" />
+
+    <ImageView
+        android:id="@+id/skill3ic"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/skill"
+        app:layout_constraintBottom_toBottomOf="@id/skillbox3"
+        app:layout_constraintEnd_toEndOf="@id/skillbox3"
+        app:layout_constraintStart_toStartOf="@id/skillbox3" />
+
+    <ImageView
+        android:id="@+id/skillbox4"
+        android:layout_width="70dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="15dp"
+        android:src="@drawable/skillblock_var2"
+        app:layout_constraintStart_toEndOf="@id/skillbox3"
+        app:layout_constraintTop_toTopOf="@id/skillbox1" />
+
+    <ImageView
+        android:id="@+id/skillwhitebox4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/whiteblock"
+        app:layout_constraintEnd_toEndOf="@id/skillbox4"
+        app:layout_constraintStart_toStartOf="@id/skillbox4"
+        app:layout_constraintTop_toTopOf="@id/skillbox4" />
+
+    <TextView
+        android:id="@+id/key4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/monumentextended_regular"
+        android:text="X"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/skillwhitebox4"
+        app:layout_constraintEnd_toEndOf="@id/skillwhitebox4"
+        app:layout_constraintStart_toStartOf="@id/skillwhitebox4"
+        app:layout_constraintTop_toTopOf="@id/skillwhitebox4" />
+
+    <ImageView
+        android:id="@+id/skill4ic"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/skill"
+        app:layout_constraintBottom_toBottomOf="@id/skillbox4"
+        app:layout_constraintEnd_toEndOf="@id/skillbox4"
+        app:layout_constraintStart_toStartOf="@id/skillbox4" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
