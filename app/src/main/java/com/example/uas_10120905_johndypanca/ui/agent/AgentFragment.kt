@@ -8,12 +8,11 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import androidx.core.os.bundleOf
 import androidx.core.view.GravityCompat
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.example.uas_10120905_johndypanca.MainActivity
 import com.example.uas_10120905_johndypanca.R
-import com.example.uas_10120905_johndypanca.databinding.ActivityMainBinding
 import com.example.uas_10120905_johndypanca.databinding.FragmentAgentBinding
 import com.example.uas_10120905_johndypanca.ui.api.FetchAgent
 import com.example.uas_10120905_johndypanca.ui.api.RetrofitClient
@@ -23,7 +22,6 @@ class AgentFragment : Fragment() {
 
     private var _binding: FragmentAgentBinding? = null
     private val binding get() = _binding!!
-
     private lateinit var agentAdapter: AgentAdapter
 
     override fun onCreateView(
@@ -31,19 +29,13 @@ class AgentFragment : Fragment() {
         savedInstanceState: Bundle?
 
     ): View {
-        val bbinding = ActivityMainBinding.inflate(layoutInflater)
         _binding = FragmentAgentBinding.inflate(inflater, container, false)
-        // Find the burger menu button by ID
         val burgerMenuButton: ImageButton = binding.root.findViewById(R.id.btnBurgerMenu)
-
-        // Set up the click listener for the burger menu button
+        val mainActivity = requireActivity() as MainActivity
         burgerMenuButton.setOnClickListener {
-            // Open the navigation drawer when the button is clicked
-            val drawerLayout: DrawerLayout = bbinding.drawerLayout
-            drawerLayout.openDrawer(GravityCompat.START)
+            mainActivity.getDrawerLayout().openDrawer(GravityCompat.START)
         }
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

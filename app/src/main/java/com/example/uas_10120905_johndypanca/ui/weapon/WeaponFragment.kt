@@ -4,9 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.RecyclerView
+import com.example.uas_10120905_johndypanca.MainActivity
+import com.example.uas_10120905_johndypanca.R
 import com.example.uas_10120905_johndypanca.databinding.FragmentWeaponBinding
 import com.example.uas_10120905_johndypanca.ui.api.FetchWeapon
 import com.example.uas_10120905_johndypanca.ui.api.RetrofitClient
@@ -26,6 +30,11 @@ class WeaponFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentWeaponBinding.inflate(inflater, container, false)
+        val burgerMenuButton: ImageButton = binding.root.findViewById(R.id.btnBurgerMenu)
+        val mainActivity = requireActivity() as MainActivity
+        burgerMenuButton.setOnClickListener {
+            mainActivity.getDrawerLayout().openDrawer(GravityCompat.START)
+        }
         val root: View = binding.root
 
         // Initialize the WeaponAdapter with an empty list for now

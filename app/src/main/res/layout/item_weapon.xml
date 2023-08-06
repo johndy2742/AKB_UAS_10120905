@@ -10,12 +10,12 @@
         android:id="@+id/weaponcv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_20dp"
         app:cardBackgroundColor="@android:color/transparent"
         app:cardElevation="@dimen/_0dp"
-        android:layout_marginBottom="20dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/weaponDetailsLayout"
@@ -25,8 +25,8 @@
 
             <ImageView
                 android:id="@+id/weaponbg"
-                android:layout_width="150dp"
-                android:layout_height="180dp"
+                android:layout_width="@dimen/_150dp"
+                android:layout_height="@dimen/_180dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/weaponbg"
                 app:layout_constraintStart_toStartOf="parent"
@@ -34,8 +34,8 @@
 
             <ImageView
                 android:id="@+id/weaponic"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
+                android:layout_width="@dimen/_150dp"
+                android:layout_height="@dimen/_50dp"
                 android:src="@drawable/weaponicon"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/weaponbg"
@@ -46,12 +46,12 @@
                 android:id="@+id/weaponname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
                 android:fontFamily="@font/monumentextended_regular"
-                android:text="odin"
-                app:layout_constraintStart_toStartOf="@id/weaponic"
+                android:text="@string/odin"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@id/weaponic"
-                app:layout_constraintTop_toBottomOf="@id/weaponic"/>
+                app:layout_constraintStart_toStartOf="@id/weaponic"
+                app:layout_constraintTop_toBottomOf="@id/weaponic" />
 
             <ImageView
                 android:id="@+id/weaponbg2"
@@ -65,8 +65,8 @@
                 android:id="@+id/coin"
                 android:layout_width="@dimen/_20dp"
                 android:layout_height="@dimen/_20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_marginTop="@dimen/_20dp"
                 android:src="@drawable/coins"
                 app:layout_constraintStart_toStartOf="@id/weaponbg2"
                 app:layout_constraintTop_toTopOf="@id/weaponbg2" />
@@ -76,7 +76,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/monumentextended_regular"
-                android:text="3200"
+                android:text="@string/_3200"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_16sp"
                 app:layout_constraintBottom_toBottomOf="@id/coin"
@@ -88,9 +88,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/monumentextended_regular"
-                android:text="Heavy Weapon"
+                android:text="@string/heavy_weapon"
                 android:textColor="@color/valencia"
-                android:textSize="10sp"
+                android:textSize="@dimen/_10sp"
                 app:layout_constraintStart_toStartOf="@id/coin"
                 app:layout_constraintTop_toBottomOf="@id/coin" />
 
@@ -98,9 +98,9 @@
                 android:id="@+id/weaponDetailsTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="weapon detail"
+                android:text="@string/weapon_detail"
                 android:textColor="@color/white"
-                android:textSize="8sp"
+                android:textSize="@dimen/_8sp"
                 app:layout_constraintStart_toStartOf="@id/weaponcat"
                 app:layout_constraintTop_toBottomOf="@id/weaponcat" />
 
@@ -109,7 +109,6 @@
 
 
     </androidx.cardview.widget.CardView>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

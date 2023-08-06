@@ -14,4 +14,14 @@
     <string name="initator">Initator</string>
     <string name="weapon">Weapon</string>
     <string name="tiers">Tiers</string>
+    <string name="immortal_3">Immortal 3</string>
+    <string name="brimstone">Brimstone</string>
+    <string name="odin">odin</string>
+    <string name="_3200">3200</string>
+    <string name="heavy_weapon">Heavy Weapon</string>
+    <string name="weapon_detail">weapon detail</string>
+    <string name="c">C</string>
+    <string name="q">Q</string>
+    <string name="e">E</string>
+    <string name="x">X</string>
 </resources>

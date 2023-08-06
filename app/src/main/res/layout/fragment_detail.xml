@@ -8,10 +8,10 @@
 
     <ImageButton
         android:id="@+id/backButton"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="35dp"
+        android:layout_width="@dimen/_40dp"
+        android:layout_height="@dimen/_40dp"
+        android:layout_marginStart="@dimen/_35dp"
+        android:layout_marginTop="@dimen/_35dp"
         android:background="?android:attr/selectableItemBackground"
         android:scaleType="centerInside"
         android:src="@drawable/back_button_ic"
@@ -21,8 +21,8 @@
     <ImageView
         android:id="@+id/banner"
         android:layout_width="wrap_content"
-        android:layout_height="250dp"
-        android:layout_marginBottom="250dp"
+        android:layout_height="@dimen/_250dp"
+        android:layout_marginBottom="@dimen/_250dp"
         android:src="@drawable/banner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,13 +31,13 @@
 
     <TextView
         android:id="@+id/agentname"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/_0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/_50dp"
         android:fontFamily="@font/druktextwide_medium_trial"
-        android:text="Brimstone"
+        android:text="@string/brimstone"
         android:textColor="@color/white"
-        android:textSize="40sp"
+        android:textSize="@dimen/_40sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/backButton"
         app:layout_constraintTop_toBottomOf="@+id/backButton" />
@@ -45,9 +45,9 @@
 
     <ImageView
         android:id="@+id/fullportrait"
-        android:layout_width="400dp"
-        android:layout_height="800dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="@dimen/_400dp"
+        android:layout_height="@dimen/_800dp"
+        android:layout_marginTop="@dimen/_100dp"
         android:layout_marginEnd="@dimen/_50dp"
         android:scaleType="centerCrop"
         android:src="@drawable/fullportrait"
@@ -58,59 +58,57 @@
 
     <ImageView
         android:id="@+id/shadow"
-        android:layout_width="450dp"
-        android:layout_height="800dp"
-        android:layout_marginBottom="70dp"
+        android:layout_width="@dimen/_450dp"
+        android:layout_height="@dimen/_800dp"
+        android:layout_marginBottom="@dimen/_70dp"
         android:scaleType="fitCenter"
         android:src="@drawable/pink_shadow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/banner"
-        app:layout_constraintVertical_bias="0.502" />
+        app:layout_constraintTop_toBottomOf="@id/banner" />
 
     <ImageView
         android:id="@+id/role"
-        android:layout_width="45dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="80dp"
+        android:layout_width="@dimen/_45dp"
+        android:layout_height="@dimen/_50dp"
+        android:layout_marginStart="@dimen/_80dp"
+        android:layout_marginBottom="@dimen/_50dp"
         android:src="@drawable/role_ic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/banner"
         app:layout_constraintBottom_toTopOf="@id/skillbox1"
-        android:layout_marginBottom="50dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/banner" />
 
 
     <TextView
         android:id="@+id/roletext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="@dimen/_10dp"
         android:fontFamily="@font/monumentextended_regular"
         android:text="@string/initator"
         android:textColor="@color/white"
-        android:textSize="40sp"
+        android:textSize="@dimen/_40sp"
         app:layout_constraintBottom_toBottomOf="@id/role"
         app:layout_constraintStart_toEndOf="@id/role"
         app:layout_constraintTop_toTopOf="@id/role" />
 
     <ImageView
         android:id="@+id/skillbox1"
-        android:layout_width="70dp"
-        android:layout_height="125dp"
-        android:layout_marginStart="38dp"
-        android:src="@drawable/skillblock_var1"
+        android:layout_width="@dimen/_70dp"
+        android:layout_height="@dimen/_125dp"
+        android:layout_marginStart="@dimen/_38dp"
         android:layout_marginTop="@dimen/_35dp"
+        android:src="@drawable/skillblock_var1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/role" />
 
     <ImageView
         android:id="@+id/skillwhitebox1"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="30dp"
+        android:layout_width="@dimen/_50dp"
+        android:layout_height="@dimen/_50dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginEnd="@dimen/_30dp"
         android:src="@drawable/whiteblock"
         app:layout_constraintEnd_toEndOf="@id/skillbox1"
         app:layout_constraintStart_toStartOf="@id/skillbox1"
@@ -121,7 +119,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/monumentextended_regular"
-        android:text="C"
+        android:text="@string/c"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@id/skillwhitebox1"
         app:layout_constraintEnd_toEndOf="@id/skillwhitebox1"
@@ -130,9 +128,9 @@
 
     <ImageView
         android:id="@+id/skill1ic"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="15dp"
+        android:layout_width="@dimen/_35dp"
+        android:layout_height="@dimen/_35dp"
+        android:layout_marginBottom="@dimen/_15dp"
         android:src="@drawable/skill"
         app:layout_constraintBottom_toBottomOf="@id/skillbox1"
         app:layout_constraintEnd_toEndOf="@id/skillbox1"
@@ -140,19 +138,19 @@
 
     <ImageView
         android:id="@+id/skillbox2"
-        android:layout_width="70dp"
-        android:layout_height="125dp"
-        android:layout_marginStart="15dp"
+        android:layout_width="@dimen/_70dp"
+        android:layout_height="@dimen/_125dp"
+        android:layout_marginStart="@dimen/_15dp"
         android:src="@drawable/skillblock_var2"
         app:layout_constraintStart_toEndOf="@id/skillbox1"
         app:layout_constraintTop_toTopOf="@id/skillbox1" />
 
     <ImageView
         android:id="@+id/skillwhitebox2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="30dp"
+        android:layout_width="@dimen/_50dp"
+        android:layout_height="@dimen/_50dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginEnd="@dimen/_30dp"
         android:src="@drawable/whiteblock"
         app:layout_constraintEnd_toEndOf="@id/skillbox2"
         app:layout_constraintStart_toStartOf="@id/skillbox2"
@@ -163,7 +161,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/monumentextended_regular"
-        android:text="Q"
+        android:text="@string/q"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@id/skillwhitebox2"
         app:layout_constraintEnd_toEndOf="@id/skillwhitebox2"
@@ -172,9 +170,9 @@
 
     <ImageView
         android:id="@+id/skill2ic"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="15dp"
+        android:layout_width="@dimen/_35dp"
+        android:layout_height="@dimen/_35dp"
+        android:layout_marginBottom="@dimen/_15dp"
         android:src="@drawable/skill"
         app:layout_constraintBottom_toBottomOf="@id/skillbox2"
         app:layout_constraintEnd_toEndOf="@id/skillbox2"
@@ -182,19 +180,19 @@
 
     <ImageView
         android:id="@+id/skillbox3"
-        android:layout_width="70dp"
-        android:layout_height="125dp"
-        android:layout_marginStart="15dp"
+        android:layout_width="@dimen/_70dp"
+        android:layout_height="@dimen/_125dp"
+        android:layout_marginStart="@dimen/_15dp"
         android:src="@drawable/skillblock_var1"
         app:layout_constraintStart_toEndOf="@id/skillbox2"
         app:layout_constraintTop_toTopOf="@id/skillbox1" />
 
     <ImageView
         android:id="@+id/skillwhitebox3"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="30dp"
+        android:layout_width="@dimen/_50dp"
+        android:layout_height="@dimen/_50dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginEnd="@dimen/_30dp"
         android:src="@drawable/whiteblock"
         app:layout_constraintEnd_toEndOf="@id/skillbox3"
         app:layout_constraintStart_toStartOf="@id/skillbox3"
@@ -205,7 +203,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/monumentextended_regular"
-        android:text="E"
+        android:text="@string/e"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@id/skillwhitebox3"
         app:layout_constraintEnd_toEndOf="@id/skillwhitebox3"
@@ -214,9 +212,9 @@
 
     <ImageView
         android:id="@+id/skill3ic"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="15dp"
+        android:layout_width="@dimen/_35dp"
+        android:layout_height="@dimen/_35dp"
+        android:layout_marginBottom="@dimen/_15dp"
         android:src="@drawable/skill"
         app:layout_constraintBottom_toBottomOf="@id/skillbox3"
         app:layout_constraintEnd_toEndOf="@id/skillbox3"
@@ -224,19 +222,19 @@
 
     <ImageView
         android:id="@+id/skillbox4"
-        android:layout_width="70dp"
-        android:layout_height="125dp"
-        android:layout_marginStart="15dp"
+        android:layout_width="@dimen/_70dp"
+        android:layout_height="@dimen/_125dp"
+        android:layout_marginStart="@dimen/_15dp"
         android:src="@drawable/skillblock_var2"
         app:layout_constraintStart_toEndOf="@id/skillbox3"
         app:layout_constraintTop_toTopOf="@id/skillbox1" />
 
     <ImageView
         android:id="@+id/skillwhitebox4"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="30dp"
+        android:layout_width="@dimen/_50dp"
+        android:layout_height="@dimen/_50dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginEnd="@dimen/_30dp"
         android:src="@drawable/whiteblock"
         app:layout_constraintEnd_toEndOf="@id/skillbox4"
         app:layout_constraintStart_toStartOf="@id/skillbox4"
@@ -247,7 +245,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/monumentextended_regular"
-        android:text="X"
+        android:text="@string/x"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@id/skillwhitebox4"
         app:layout_constraintEnd_toEndOf="@id/skillwhitebox4"
@@ -256,15 +254,13 @@
 
     <ImageView
         android:id="@+id/skill4ic"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="15dp"
+        android:layout_width="@dimen/_35dp"
+        android:layout_height="@dimen/_35dp"
+        android:layout_marginBottom="@dimen/_15dp"
         android:src="@drawable/skill"
         app:layout_constraintBottom_toBottomOf="@id/skillbox4"
         app:layout_constraintEnd_toEndOf="@id/skillbox4"
         app:layout_constraintStart_toStartOf="@id/skillbox4" />
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

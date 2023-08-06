@@ -24,12 +24,16 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController // Declare navController as a class-level property
+    private lateinit var drawerLayout: DrawerLayout
+    fun getDrawerLayout(): DrawerLayout {
+        return drawerLayout
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val drawerLayout: DrawerLayout = binding.drawerLayout
+        drawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
 
         // Find the burger menu button by ID
@@ -38,7 +42,6 @@ class MainActivity : AppCompatActivity() {
         // Set up the click listener for the burger menu button
         burgerMenuButton.setOnClickListener {
             // Open the navigation drawer when the button is clicked
-            val drawerLayout: DrawerLayout = binding.drawerLayout
             drawerLayout.openDrawer(GravityCompat.START)
         }
 
