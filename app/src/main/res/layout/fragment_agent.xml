@@ -9,14 +9,14 @@
         android:id="@+id/btnBurgerMenu"
         android:layout_width="@dimen/_50dp"
         android:layout_height="@dimen/_50dp"
-        android:scaleType="centerInside"
-        android:src="@drawable/burgermenu"
-        android:background="?attr/selectableItemBackgroundBorderless"
         android:layout_gravity="start"
         android:layout_marginStart="@dimen/_16dp"
         android:layout_marginTop="@dimen/_30dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="centerInside"
+        android:src="@drawable/burgermenu"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
@@ -27,17 +27,17 @@
         android:fontFamily="@font/druktextwide_medium_trial"
         android:text="@string/agents"
         android:textColor="@color/white"
-        android:textSize="40sp"
+        android:textSize="@dimen/_40sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/btnBurgerMenu"
         app:layout_constraintStart_toEndOf="@id/btnBurgerMenu"
-        app:layout_constraintTop_toTopOf="@id/btnBurgerMenu"
-        app:layout_constraintBottom_toBottomOf="@id/btnBurgerMenu"/>
+        app:layout_constraintTop_toTopOf="@id/btnBurgerMenu" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/agentlist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/_30dp"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintStart_toStartOf="parent"

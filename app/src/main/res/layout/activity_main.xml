@@ -17,6 +17,10 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
+        app:itemTextAppearance="@style/NavbarStyle"
+        app:itemTextColor="@color/white"
+        app:theme="@style/ThemeOverlay.AppCompat.navTheme"
+        android:background="@drawable/navdrawercolor"
         app:menu="@menu/activity_main_drawer" />
 
 

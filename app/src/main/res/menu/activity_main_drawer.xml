@@ -6,8 +6,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_agent"
-            android:title="@string/agents"
-            />
+            android:title="@string/agents" />
         <item
             android:id="@+id/nav_weapon"
             android:title="@string/weapon" />

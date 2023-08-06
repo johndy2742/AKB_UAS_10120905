@@ -19,7 +19,14 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.UAS_10120905_JohndyPanca.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="ThemeOverlay.AppCompat.navTheme">
+        <item name="colorPrimary">@color/valencia</item>
+        <item name="colorControlHighlight">@color/valencia</item>
+    </style>
 
-    <style name="Theme.UAS_10120905_JohndyPanca.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="NavbarStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily"> @font/monumentextended_regular</item>
+    </style>
+
+
 </resources>
