@@ -1,5 +1,7 @@
 package com.example.uas_10120905_johndypanca.ui.detail
 
+import android.media.AudioManager
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,6 +18,9 @@ class DetailFragment : Fragment() {
     private var _binding: FragmentDetailBinding? = null
     private val binding get() = _binding!!
 
+    private lateinit var mediaPlayer: MediaPlayer
+    private var voiceLineUrl: String? = null
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,59 +33,70 @@ class DetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Access the agent data passed from the argument
-        val agentData = arguments?.getParcelable<AgentResponse.Data>("agent") as? AgentResponse.Data
+        val agentData = arguments?.getParcelable<AgentResponse.Data>(ARG_AGENT_DATA) ?: return
 
-        if (agentData != null) {
-            binding.agentname.text = agentData.displayName
+        binding.agentname.text = agentData.displayName
 
-            Glide.with(requireContext())
-                .load(agentData.fullPortrait)
-                .placeholder(R.drawable.fullportrait)
-                .into(binding.fullportrait)
+        Glide.with(requireContext())
+            .load(agentData.fullPortrait)
+            .placeholder(R.drawable.fullportrait)
+            .into(binding.fullportrait)
 
-            Glide.with(requireContext())
-                .load(agentData.role.displayIcon)
-                .placeholder(R.drawable.role_ic) // Set a placeholder image while loading
-                .into(binding.role)
+        Glide.with(requireContext())
+            .load(agentData.role.displayIcon)
+            .placeholder(R.drawable.role_ic)
+            .into(binding.role)
 
-            binding.roletext.text = agentData.role.displayName
+        binding.roletext.text = agentData.role.displayName
 
-            Glide.with(requireContext())
-                .load(agentData.abilities[0].displayIcon)
-                .placeholder(R.drawable.skill) // Set a placeholder image while loading
-                .into(binding.skill1ic)
+        Glide.with(requireContext())
+            .load(agentData.abilities[0].displayIcon)
+            .placeholder(R.drawable.skill)
+            .into(binding.skill1ic)
 
-            Glide.with(requireContext())
-                .load(agentData.abilities[1].displayIcon)
-                .placeholder(R.drawable.skill) // Set a placeholder image while loading
-                .into(binding.skill2ic)
+        Glide.with(requireContext())
+            .load(agentData.abilities[1].displayIcon)
+            .placeholder(R.drawable.skill)
+            .into(binding.skill2ic)
 
-            Glide.with(requireContext())
-                .load(agentData.abilities[2].displayIcon)
-                .placeholder(R.drawable.skill) // Set a placeholder image while loading
-                .into(binding.skill3ic)
+        Glide.with(requireContext())
+            .load(agentData.abilities[2].displayIcon)
+            .placeholder(R.drawable.skill)
+            .into(binding.skill3ic)
 
-            Glide.with(requireContext())
-                .load(agentData.abilities[3].displayIcon)
-                .placeholder(R.drawable.skill) // Set a placeholder image while loading
-                .into(binding.skill4ic)
+        Glide.with(requireContext())
+            .load(agentData.abilities[3].displayIcon)
+            .placeholder(R.drawable.skill)
+            .into(binding.skill4ic)
 
-            // Set the click listener for the back button
-            binding.backButton.setOnClickListener {
-                // Navigate back to the previous screen or close the fragment
-                findNavController().popBackStack()
-            }
-
-        } else {
-            // Handle the case when agentData is null (e.g., show a default name or error message)
-            binding.agentname.text = "Agent Data Not Available"
-            binding.fullportrait.setImageResource(R.drawable.fullportrait) // Show a default image if the agent image is not available
+        // Set the click listener for the back button
+        binding.backButton.setOnClickListener {
+            // Navigate back to the previous screen or close the fragment
+            findNavController().popBackStack()
         }
+
+        // Extract the voiceline URL from agentData
+        val voiceLineUrl = agentData.voiceLine?.mediaList?.get(0)?.wave
+        if (voiceLineUrl != null) {
+            this.voiceLineUrl = voiceLineUrl
+            prepareMediaPlayer(voiceLineUrl)
+        }
+    }
+
+    private fun prepareMediaPlayer(voiceLineUrl: String) {
+        mediaPlayer = MediaPlayer()
+        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC)
+        mediaPlayer.setDataSource(voiceLineUrl)
+        mediaPlayer.setOnPreparedListener { player ->
+            player.start()
+        }
+        mediaPlayer.prepareAsync()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+        mediaPlayer.release()
     }
 
     companion object {
